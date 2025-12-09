@@ -1,4 +1,4 @@
-import random
+simport random
 
 
 r = random.randint(1, 6)
