@@ -1,9 +1,21 @@
 これはマージして競合した際にもとに戻すコマンドである
 git merge --abort
 
-ブランチの削除リモート
+ブランチの削除
 // ローカルのブランチを削除する場合
 git branch -d localBranchName
 
 // リモートのブランチを削除する場合
 git push origin --delete remoteBranchName
+
+# git branch -m (変更前のブランチ名) 変更後のブランチ名
+git branch -m main master
+
+# git push -u origin 変更後のブランチ名
+git push -u origin master
+
+※ もともと既定だったブランチ以外を変更するときにはこの操作は必要ありません。
+リポジトリのSettings→左メニューBranches→Default branchのところで、masterとなっているところをmainに変更して、Updateを押します。
+モーダルにも書かれる通り、Pull RequestやCloneに悪影響が出る可能性があります。
+その後、削除
+git push origin --delete main
