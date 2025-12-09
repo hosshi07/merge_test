@@ -1,2 +1,9 @@
 これはマージして競合した際にもとに戻すコマンドである
 git merge --abort
+
+ブランチの削除リモート
+// ローカルのブランチを削除する場合
+git branch -d localBranchName
+
+// リモートのブランチを削除する場合
+git push origin --delete remoteBranchName
